@@ -11,6 +11,10 @@ namespace AlgorithmHW6
         private BinaryTree _leftTree;
         private BinaryTree _rightTree;
 
+        /// <summary>
+        /// Метод добавляет элемент в дерево
+        /// </summary>
+        /// <param name="i"></param>
         public void Add( int i )
         {
             if ( _value == null )
@@ -40,6 +44,10 @@ namespace AlgorithmHW6
             }
         }
 
+        /// <summary>
+        /// Метод считывает элементы из файла и поочередно добавляет их в дерево. Первый элемент в файле будет корнем.
+        /// </summary>
+        /// <param name="path">Путь к файлу</param>
         public void InsertFromFile( string path )
         {
             int[] arr = File.ReadAllText( path ).Split( new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries )
@@ -50,6 +58,11 @@ namespace AlgorithmHW6
             }
         }
 
+        /// <summary>
+        /// Поиск заданного узла, если узел не будет найдет, то выкинет ошибку
+        /// </summary>
+        /// <param name="i">Искомый узел</param>
+        /// <returns></returns>
         public BinaryTree Search( int i )
         {
             if ( _value == i )
@@ -80,6 +93,10 @@ namespace AlgorithmHW6
             }
         }
 
+        /// <summary>
+        /// Вывод дерева
+        /// </summary>
+        /// <param name="tree"></param>
         public void PrintBinaryTree( BinaryTree tree )
         {
             if ( tree != null )
@@ -112,6 +129,10 @@ namespace AlgorithmHW6
             }
         }
 
+        /// <summary>
+        /// Вывод дерева по обходу КЛП
+        /// </summary>
+        /// <param name="tree"></param>
         public void PreOrderTravers( BinaryTree tree )
         {
             if ( tree != null )
@@ -122,6 +143,10 @@ namespace AlgorithmHW6
             }
         }
 
+        /// <summary>
+        /// Вывод дерева по обходу ЛКП
+        /// </summary>
+        /// <param name="tree"></param>
         public void InOrderTravers( BinaryTree tree )
         {
             if ( tree != null )
@@ -132,6 +157,10 @@ namespace AlgorithmHW6
             }
         }
 
+        /// <summary>
+        /// Вывод дерева по обходу ЛПК
+        /// </summary>
+        /// <param name="tree"></param>
         public void PostOrderTravers( BinaryTree tree )
         {
             if ( tree != null )
